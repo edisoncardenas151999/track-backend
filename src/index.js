@@ -7,6 +7,9 @@ const app = express();
 const authRoutes = require("./routes/authRoutes");
 const trackRoutes = require("./routes/trackRoutes");
 const bodyParser = require("body-parser");
+var cors = require("cors");
+
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(authRoutes);
